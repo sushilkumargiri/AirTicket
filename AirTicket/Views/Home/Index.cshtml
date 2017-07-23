@@ -1,0 +1,19 @@
+﻿@using System.Configuration;
+@{
+    string projectPath = System.Configuration.ConfigurationManager.AppSettings["ProjectPath"];
+}
+<div class="well row">
+    <div class="col-md-12">
+        <h4>
+            Please modify project path in web.config fil which is set to <strong>@projectPath</strong> currently
+        </h4>
+        <h5>The output html files will be written to path @projectPath/Data/Output</h5>
+        <h5>Please make sure Style.css file is present in the folder @projectPath/Data/Output for better formatting of html files</h5>
+        <hr />
+        <h4>Click below Link to process xml files and convert to html files.</h4>
+        <hr />
+
+        <h1>@Html.ActionLink("process xml", "ProcessXML")</h1>
+
+    </div>
+</div>

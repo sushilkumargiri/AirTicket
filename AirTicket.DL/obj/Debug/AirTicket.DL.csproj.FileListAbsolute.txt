@@ -1,0 +1,5 @@
+S:\AirTicket\AirTicket.DL\bin\Debug\AirTicket.DL.dll
+S:\AirTicket\AirTicket.DL\bin\Debug\AirTicket.DL.pdb
+S:\AirTicket\AirTicket.DL\obj\Debug\AirTicket.DL.csprojResolveAssemblyReference.cache
+S:\AirTicket\AirTicket.DL\obj\Debug\AirTicket.DL.dll
+S:\AirTicket\AirTicket.DL\obj\Debug\AirTicket.DL.pdb

@@ -1,0 +1,31 @@
+﻿
+@using System.Configuration;
+@model int
+@{
+    string projectPath = System.Configuration.ConfigurationManager.AppSettings["ProjectPath"];
+}
+@{
+    ViewBag.Title = "ProcessXML";
+}
+
+<h1>@Html.ActionLink("Go Back and try again", "Index")</h1>
+<hr />
+
+<h2>Process XML Output</h2>
+<hr />
+<div class="well row">
+    <div class="col-md-12">
+        <h4>Output html files written to folder <strong>@projectPath/Data/Output</strong>.</h4>
+        <hr />
+        <table class="table table-bordered">
+            @for (int i = 1; i <= Model; i++)
+            {
+                <tr>
+                    <td>
+                        <a target="_blank" href="~/Data/Output/@(i.ToString()+".html")">@(i.ToString() + ".html")</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

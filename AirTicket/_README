@@ -1,0 +1,22 @@
+3 layer MVC project is created.
+Change "ProjectPath" in web.config file to your project folder.
+XML files are located in Data\Computers at root path.
+Output Html files will be generated in folder Data\Output.
+Xslt file is located at \Resources".
+
+Run the project and see screenshots on how to test the application.
+
+1. XML read and html write operations are assumed to be data related therefore code is put in repository in data access layer(DL)
+2. Transformation to html are business related operations therefore code is in business layer of project(BL)
+3. Windsor Castle IOC is implemented for DI.
+
+Mocking and testing
+1. Goal of testing is to test business logic not data.
+2. Mocking framework MOQ is used to mock repository dependency in services and test business logic.
+3. Need to pass real XML and Xslt data to test html tranformation logic because actual transformation code sits in services.
+(unlike read/write where we can send any test data because we are not interested in data test but logic test)
+See test method Transform_Xml_and_Xslt_to_Html.
+
+Publisher Consumer pattern with threading is not implemented because I am not very confident in that pattern. 
+It is something I can learn and do if you think it to be of utmost important.
+Please let me know.
